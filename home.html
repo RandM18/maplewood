@@ -5,7 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="libs/slick/slick.css" />
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
@@ -73,8 +80,14 @@
                 <div class="container">
                     <div class="head__wrapper">
                         <div class="head__slider_arrows">
-                            <div class="head__slider_arrow left"></div>
-                            <div class="head__slider_arrow right"></div>
+                            <div
+                                class="head__slider_arrow left"
+                                id="head__slider-prev"
+                            ></div>
+                            <div
+                                class="head__slider_arrow right"
+                                id="head__slider-next"
+                            ></div>
                         </div>
                         <h1 class="head__title">WORKFORCE DEVELOPMENT</h1>
                         <a href="#" class="head__btn">Learn more</a>
@@ -207,40 +220,53 @@
             <!-- CALENDAR -->
             <div class="calendar">
                 <div class="container">
-                    <div class="calendar__date">
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
+                    <div class="calendar__wrapper">
+                        <div
+                            class="calendar__arrow left"
+                            id="calendar-prev"
+                        ></div>
+                        <div class="calendar__main">
+                            <div class="calendar__date">
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                                <div class="calendar__date_item">
+                                    <div class="calendar__date_day">15</div>
+                                    <div class="calendar__date_number">Mon</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
-                        <div class="calendar__date_item">
-                            <div class="calendar__date_day">15</div>
-                            <div class="calendar__date_number">Mon</div>
-                        </div>
+                        <div
+                            class="calendar__arrow right"
+                            id="calendar-next"
+                        ></div>
                     </div>
+
                     <div class="calendar__news">
                         <div class="calendar__newscard">
                             <div class="calendar__newscard_title">
@@ -358,150 +384,165 @@
         </div>
         <footer class="footer" id="footer">
             <div class="footer__wrapper">
-                <div class="footer__cols">
-                    <div class="footer__col">
-                        <div class="footer__col_title">HIGH SCHOOL</div>
-                        <ul class="footer__col_links">
-                            <li class="footer__col_link">
-                                <a href="#">Programs</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Current Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Future Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Parents</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Special Services</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">HS Staff Directory</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Food Service</a>
-                            </li>
-                        </ul>
+                <div class="container">
+                    <div class="footer__cols">
+                        <div class="footer__col">
+                            <div class="footer__col_title">HIGH SCHOOL</div>
+                            <ul class="footer__col_links">
+                                <li class="footer__col_link">
+                                    <a href="#">Programs</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Current Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Future Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Parents</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Special Services</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">HS Staff Directory</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Food Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col">
+                            <div class="footer__col_title">HIGH SCHOOL</div>
+                            <ul class="footer__col_links">
+                                <li class="footer__col_link">
+                                    <a href="#">Programs</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Current Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Future Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Parents</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Special Services</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">HS Staff Directory</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Food Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col">
+                            <div class="footer__col_title">HIGH SCHOOL</div>
+                            <ul class="footer__col_links">
+                                <li class="footer__col_link">
+                                    <a href="#">Programs</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Current Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Future Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Parents</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Special Services</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">HS Staff Directory</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Food Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col">
+                            <div class="footer__col_title">HIGH SCHOOL</div>
+                            <ul class="footer__col_links">
+                                <li class="footer__col_link">
+                                    <a href="#">Programs</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Current Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Future Students</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Parents</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Special Services</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">HS Staff Directory</a>
+                                </li>
+                                <li class="footer__col_link">
+                                    <a href="#">Food Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col">
+                            <div class="footer__col_title">CONTACT</div>
+                            <ul class="footer__col_links">
+                                <li class="footer__col_link">
+                                    <i class="icon icon__phone"></i>
+                                    <span>30-296-2892</span>
+                                </li>
+                                <li class="footer__col_link">
+                                    <i class="icon icon__adres"></i>
+                                    <span
+                                        >7075 State Route 88, Ravenna OH
+                                        44266</span
+                                    >
+                                </li>
+                            </ul>
+                            <div class="footer__col_title">Social</div>
+                            <ul class="socials">
+                                <li class="socials__item">
+                                    <a href="#"
+                                        ><i class="icon icon__fb"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="footer__col">
-                        <div class="footer__col_title">HIGH SCHOOL</div>
-                        <ul class="footer__col_links">
-                            <li class="footer__col_link">
-                                <a href="#">Programs</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Current Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Future Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Parents</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Special Services</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">HS Staff Directory</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Food Service</a>
-                            </li>
-                        </ul>
+                    <div class="footer__text">
+                        Maplewood Career Center is committed to providing a
+                        website that is accessible to the widest possible
+                        audience and in compliance with Section 508 guidelines.
+                        If you have accessibility concerns or any issues viewing
+                        our content, please call Mike Lenzo (330) 296-2892.
                     </div>
-                    <div class="footer__col">
-                        <div class="footer__col_title">HIGH SCHOOL</div>
-                        <ul class="footer__col_links">
-                            <li class="footer__col_link">
-                                <a href="#">Programs</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Current Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Future Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Parents</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Special Services</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">HS Staff Directory</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Food Service</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <div class="footer__col_title">HIGH SCHOOL</div>
-                        <ul class="footer__col_links">
-                            <li class="footer__col_link">
-                                <a href="#">Programs</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Current Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Future Students</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Parents</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Special Services</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">HS Staff Directory</a>
-                            </li>
-                            <li class="footer__col_link">
-                                <a href="#">Food Service</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__col">
-                        <div class="footer__col_title">CONTACT</div>
-                        <ul class="footer__col_links">
-                            <li class="footer__col_link">
-                                <i class="icon icon__phone"></i>
-                                <span>30-296-2892</span>
-                            </li>
-                            <li class="footer__col_link">
-                                <i class="icon icon__adres"></i>
-                                <span
-                                    >7075 State Route 88, Ravenna OH 44266</span
-                                >
-                            </li>
-                        </ul>
-                        <div class="footer__col_title">Social</div>
-                        <ul class="socials">
-                            <li class="socials__item">
-                                <a href="#"><i class="icon icon__fb"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__text">
-                    Maplewood Career Center is committed to providing a website
-                    that is accessible to the widest possible audience and in
-                    compliance with Section 508 guidelines. If you have
-                    accessibility concerns or any issues viewing our content,
-                    please call Mike Lenzo (330) 296-2892.
                 </div>
                 <div class="footer__bottom">
-                    <div class="footer__text">
-                        ©2022 Maplewood Career Center. All Rights Reserved.
+                    <div class="container">
+                        <div class="footer__bottom_wrapper">
+                            <div class="footer__corp">
+                                ©2022 Maplewood Career Center. All Rights
+                                Reserved.
+                            </div>
+                            <div class="footer__logo">
+                                <img src="img/footerlogo.svg" alt="" />
+                            </div>
+                            <div class="footer__by">
+                                Begin. Believe. Become.
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer__logo">
-                        <img src="img/footerlogo.svg" alt="" />
-                    </div>
-                    <div class="footer__by">Begin. Believe. Become.</div>
                 </div>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="libs/slick/slick.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
