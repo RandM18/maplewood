@@ -30,4 +30,11 @@ jQuery(function ($) {
             },
         ],
     });
+
+    $("#burger").on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        $(".menu").toggleClass("active");
+        $("body").toggleClass("lock");
+    });
 });
