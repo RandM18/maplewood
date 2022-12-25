@@ -31,10 +31,24 @@ jQuery(function ($) {
         ],
     });
 
+    $('.photos__slider').slick({
+        // arrows:false,
+        dots:false,
+        infinity: true,
+        slidesToShow:3,
+        centerMode: true,
+        prevArrow: $('#photos__prev'),
+        nextArrow: $('#photos__next'),
+    });
+
     $("#burger").on("click", function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
         $(".menu").toggleClass("active");
         $("body").toggleClass("lock");
+    });
+
+    $(".icon__submenu").on("click", function () {
+        $(this).closest(".dropdown").toggleClass("active");
     });
 });
