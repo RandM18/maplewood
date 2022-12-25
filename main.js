@@ -10,7 +10,27 @@ jQuery(function ($) {
         appendDots: $(".head__slider_bullets"),
     });
 
-    $(".calendar__date").slick({
+    // $(".calendar__date").slick({
+    //     slidesToShow: 5,
+    //     dots: false,
+    //     prevArrow: $("#calendar-prev"),
+    //     nextArrow: $("#calendar-next"),
+    //     responsive: [
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //             },
+    //         },
+    //     ],
+    // });
+    $(".calendar__items").slick({
         slidesToShow: 5,
         dots: false,
         prevArrow: $("#calendar-prev"),
