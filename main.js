@@ -77,4 +77,9 @@ jQuery(function ($) {
         let html = '<div class="result"><i class="icon icon__success"></i><div class="head2__title">Thank You!</div><p>Your message has been sent successfully!</p><a href="/" class="yellowbtn">Go to main page</a></div>';
         $(this).parent().html(html);
     });
+
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
 });

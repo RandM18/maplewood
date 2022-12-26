@@ -1010,7 +1010,8 @@ img {
     }
 }
 
-.fullpage {
+.fullpage, .popup {
+    background-color: #fff;
     // .fullpage__wrapper
     position: relative;
     min-height: 100vh;
@@ -2143,4 +2144,90 @@ textarea.textbox{
         background-position: right center;
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZyBmaWx0ZXI9InVybCgjYSkiPjxyZWN0IHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMiIgcng9IjIyIi8+PHBhdGggc3Ryb2tlPSIjRTJFMkU4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE1IDIyaDE0bS03LTcgNyA3LTcgNyIvPjxyZWN0IHdpZHRoPSI0Mi41IiBoZWlnaHQ9IjQyLjUiIHg9Ii43NSIgeT0iLjc1IiBzdHJva2U9IiNFMkUyRTgiIHN0cm9rZS13aWR0aD0iMS41IiByeD0iMjEuMjUiLz48L2c+PGRlZnM+PGZpbHRlciBpZD0iYSIgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiB4PSItNCIgeT0iLTQiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUdhdXNzaWFuQmx1ciBpbj0iQmFja2dyb3VuZEltYWdlRml4IiBzdGREZXZpYXRpb249IjIiLz48ZmVDb21wb3NpdGUgaW4yPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImluIiByZXN1bHQ9ImVmZmVjdDFfYmFja2dyb3VuZEJsdXJfNTQ1XzQ3MzEiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2JhY2tncm91bmRCbHVyXzU0NV80NzMxIiBtb2RlPSJub3JtYWwiIHJlc3VsdD0ic2hhcGUiLz48L2ZpbHRlcj48L2RlZnM+PC9zdmc+");
     }
+}
+
+.servicescards {
+    background: rgba(#DEEEFF, 0.3);
+    padding: 100px 0px;
+}
+
+.servicescard {
+    background: #F5FAFF;
+    border: 1px solid #084E95;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 70px;
+    // .servicescard__logo
+
+    &__logo {
+        position: absolute;
+        top: -30px;
+        left: 100px;
+        height: 60px;
+        background: #F5FAFF;
+        border: 1px solid #084E95;
+        border-radius: 80px;
+        img{
+            padding: 4px 22px;
+            object-fit: contain;
+        }
+    }
+
+    // .servicescard__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    // .servicescard__text
+
+    &__text {
+    }
+
+    // .servicescard__linkbox
+
+    &__linkbox {
+        background: #DEEEFF;
+        border-radius: 50px;
+        padding: 10px 70px;
+        a{
+            font-weight: 600;
+        }
+        margin-bottom: 40px;
+        color: #37393D;
+    }
+    transition: .5s;
+    &:hover{
+        color:#fff;
+        background: #084E95;
+        .event__content_link{
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDEyIDE2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMSA3YTEgMSAwIDAgMCAwIDJWN1ptMTAuNzA3IDEuNzA3YTEgMSAwIDAgMCAwLTEuNDE0TDUuMzQzLjkyOUExIDEgMCAwIDAgMy45MyAyLjM0M0w5LjU4NiA4bC01LjY1NyA1LjY1N2ExIDEgMCAxIDAgMS40MTQgMS40MTRsNi4zNjQtNi4zNjRaTTEgOWgxMFY3SDF2MloiLz48L3N2Zz4=");
+        }
+    }
+}
+.event {
+
+    // .event__content
+
+    &__content {
+
+        // .event__content_link
+
+        &_link {
+        }
+    }
+}
+.cancelbtn{
+    text-decoration: none;
+    background-color: transparent;
+    color: #084E95;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
