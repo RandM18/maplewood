@@ -895,7 +895,7 @@ img {
 }
 .fullpage__poster, .popup__poster {
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 0;
   height: 100%;
   width: 50%;
@@ -914,7 +914,7 @@ img {
 .fullpage__poster:after, .popup__poster:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 0;
   height: 100%;
   width: 20%;
@@ -923,7 +923,7 @@ img {
   border-right: 160px solid transparent;
 }
 .fullpage__main, .popup__main {
-  width: 50%;
+  width: calc(50% - 30px);
 }
 
 .head2 {

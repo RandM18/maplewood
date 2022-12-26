@@ -1024,13 +1024,14 @@ img {
 
     &__content {
         flex: 0 0 100%;
+
     }
 
     // .fullpage__poster
 
     &__poster {
         position: absolute;
-        left: 0;
+        left: 0px;
         top: 0;
         height: 100%;
         width: 50%;
@@ -1047,7 +1048,7 @@ img {
         &:after {
             content: "";
             position: absolute;
-            left: 0;
+            left: -1px;
             top: 0;
             height: 100%;
             width: 20%;
@@ -1059,7 +1060,7 @@ img {
     }
 
     &__main {
-        width: 50%;
+        width: calc(50% - 30px);
     }
 }
 
