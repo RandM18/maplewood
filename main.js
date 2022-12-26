@@ -71,4 +71,10 @@ jQuery(function ($) {
     $(".icon__submenu").on("click", function () {
         $(this).closest(".dropdown").toggleClass("active");
     });
+
+
+    $('#form').on('submit', function(e){
+        let html = '<div class="result"><i class="icon icon__success"></i><div class="head2__title">Thank You!</div><p>Your message has been sent successfully!</p><a href="/" class="yellowbtn">Go to main page</a></div>';
+        $(this).parent().html(html);
+    });
 });
