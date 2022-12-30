@@ -660,7 +660,7 @@ img {
     margin-bottom: 40px;
 }
 .calendar__item_footer .calendar__newscard{
-    height: 170px;
+    min-height: 170px;
 }
 .calendar__item{
     transition: .5s;  
@@ -692,6 +692,7 @@ img {
         background-repeat: no-repeat;
         background-position: center center;
         cursor: pointer;
+        background-color: #084E95;
         z-index: 999;
 
         &.left {
@@ -2619,4 +2620,24 @@ textarea.textbox{
 
     &__slider {
     }
+}
+
+.calendar__items {
+    // min-height: 500px;
+    .slick-track{
+        display: flex;
+    }
+}
+
+.calendar__item{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.calendar__item_footer{
+    display: flex;
+}
+.calendar__newscard{
+    flex:100%;
+    width: 100%;
 }

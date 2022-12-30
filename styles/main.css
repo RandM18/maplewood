@@ -595,7 +595,7 @@ img {
 }
 
 .calendar__item_footer .calendar__newscard {
-  height: 170px;
+  min-height: 170px;
 }
 
 .calendar__item {
@@ -628,6 +628,7 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
+  background-color: #084E95;
   z-index: 999;
 }
 .calendar__arrow.left {
@@ -2159,4 +2160,22 @@ textarea.textbox {
 }
 .storys__sliders .slick-dots li.slick-active button {
   background-color: #fff;
+}
+.calendar__items .slick-track {
+  display: flex;
+}
+
+.calendar__item {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar__item_footer {
+  display: flex;
+}
+
+.calendar__newscard {
+  flex: 100%;
+  width: 100%;
 }
