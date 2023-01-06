@@ -101,4 +101,8 @@ jQuery(function ($) {
         e.preventDefault();
         $(this).parent().toggleClass('active');
     });
+
+    $('.cancelbtn').on('click', function(e){
+        $.magnificPopup.close();
+    });
 });

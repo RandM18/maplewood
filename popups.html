@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/popup/magnific-popup.css" />
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <header style="height: 160px; background: #092340"></header>
+
+        <main class="main" style="min-height:100vh;">
+
+            <style>
+                /* remove ) */
+                .open-popup-link{
+                    display: block;
+                    margin: 20px;
+                }
+                /*  */
+            </style>
+            <a href="#singin" class="open-popup-link">Show singin popup</a>
+            <a href="#resetpass" class="open-popup-link">Show reset password popup</a>
+            <a href="#singin" class="open-popup-link">Show pick new password popup</a>
+            <a href="#singin" class="open-popup-link">Show application popup</a>
+            <a href="#singin" class="open-popup-link">Show application reset password popup</a>
+        </main>
+        
+        <footer style="height: 600px; background: #092340"></footer>
+        
+        <div id="singin" class="popup mfp-hide">
+            <div class="fullpage__wrapper">
+                <div class="fullpage__content">
+                    <div class="container">
+                        <div class="fullpage__main">
+                            <div class="fullpage__container">
+                                <img src="img/logo.png" alt="" />
+                                <h1 class="fullpage__title">
+                                    Sign-in to your account and start exploring!
+                                </h1>
+                                <form action="#" class="form">
+                                    <div class="form__item">
+                                        <span class="form__item_label"
+                                            >User name or Email</span
+                                        >
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            class="textbox"
+                                            placeholder="Write your user name or email"
+                                        />
+                                    </div>
+                                    <div class="form__item">
+                                        <span class="form__item_label"
+                                            >Password</span
+                                        >
+                                        <input
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            class="textbox"
+                                            placeholder="Write your password"
+                                        />
+                                    </div>
+                                    <div class="form__item">
+                                        Forgot your password?
+                                        <a href="#">Reset password</a>
+                                    </div>
+                                    <div class="form__item">
+                                        <label
+                                            ><input type="checkbox" /> Remember
+                                            me</label
+                                        >
+                                    </div>
+                                    <div class="form__item">
+                                        <button class="yellowbtn" type="submit" style="max-width:100%;">
+                                            Login to your account
+                                        </button>
+                                    </div>
+                                    <div class="form__item" style="text-align:center;">
+                                        <button
+                                            class="cancelbtn"
+                                            type="reset"
+                                        >
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullpage__poster">
+                    <img src="img/fullpage.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div id="resetpass" class="popup mfp-hide">
+            <div class="fullpage__wrapper">
+                <div class="fullpage__content">
+                    <div class="container">
+                        <div class="fullpage__main">
+                            <div class="fullpage__container">
+                                <img src="img/logo.png" alt="" />
+                                <h1 class="fullpage__title">
+                                    Reset password
+                                </h1>
+                                <p>Please enter your username or email address. You will receive an email message with instructions on how to reset your password.</p>
+                                <form action="#" class="form">
+                                    <div class="form__item">
+                                        <span class="form__item_label">User name or Email</span>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            class="textbox"
+                                            placeholder="Write your user name or email"
+                                        />
+                                    </div>
+                                    <div class="form__item">
+                                        <button class="yellowbtn" type="submit" style="max-width:100%;">Get new password</button>
+                                    </div>
+                                    <div class="form__item" style="text-align:center;">
+                                        <button class="cancelbtn" type="reset">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullpage__poster">
+                    <img src="img/fullpage.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="libs/slick/slick.min.js"></script>
+        <script src="libs/popup/jquery.magnific-popup.min.js"></script>
+        <script src="main.js"></script>
+        <script>      
+            $('.open-popup-link').magnificPopup({
+                type:'inline',
+                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        </script>
+    </body>
+</html>

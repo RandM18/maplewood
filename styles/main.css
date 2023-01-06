@@ -2488,3 +2488,27 @@ textarea.textbox {
 .spoiler.active .spoiler__content {
   display: block;
 }
+
+.fullpage__container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  color: #000;
+}
+.fullpage__container p {
+  margin-bottom: 40px;
+}
+
+.fullpage__title {
+  font-weight: 800;
+  font-size: 32px;
+  text-align: center;
+  color: #1A4A81;
+  margin-bottom: 40px;
+}
+
+.form__item_label {
+  display: block;
+  text-align: left;
+}
