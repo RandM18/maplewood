@@ -87,4 +87,18 @@ jQuery(function ($) {
         arrows:false,
         dots:true
     });
+
+    $('.career__btn').on('click', function(e){
+        e.preventDefault();
+        $('.career__btn').not(this).removeClass('active');
+        $(this).addClass('active');
+        let id = $(this).attr('href');
+        $(id).addClass('active');
+        $('.career__tab').not(id).removeClass('active');
+    });
+
+    $('.spoiler__btn').on('click', function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass('active');
+    });
 });

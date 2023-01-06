@@ -32,6 +32,12 @@ h2{
     padding-bottom: 10px;
     border-bottom: 2px solid #EA9009;
 }
+h3{
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EA9009;
+    font-size: 18px;
+}
 a{
     color: #084E95;
 }
@@ -2918,32 +2924,118 @@ textarea.textbox{
         }
     }
 }
-.calendar {
 
-    // .calendar__newscard
 
-    &__newscard {
+.career {
+    // .career__btns
 
-        // .calendar__newscard_title
+    &__btns {
+        margin-bottom: 90px;
+    }
 
-        &_title {
+    // .career__btn
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 700;
+        height: 60px;
+        width: 100%;
+        background: transparent;
+        border: 1px solid #084E95;
+        border-radius: 6px;
+        color:#084E95;
+        transition: .5s;
+
+        &.active{
+            background-color: #084E95;
+            color: #fff;
         }
+    }
 
-        // .calendar__newscard_link
+    // .career__tabs
 
-        &_link {
-        }
+    &__tabs {
+    }
 
-        // .calendar__newscard_linkhover
+    // .career__tab
 
-        &_linkhover {
+    &__tab {
+        display: none;
+        &.active{
+            display: block;
         }
     }
 }
-.icon {
 
-    // .icon__right
+.careercard {
+    border: 1px solid #084E95;
+    padding: 50px 25px;
+    color: #37393D;
+    // .careercard__date
 
-    &__right {
+    &__date {
+        font-weight: 700;
+        color: #A4A8AF;
+        margin-bottom: 10px;
+    }
+
+    // .careercard__title
+
+    &__title {
+        color: #37393D;
+        font-size: 24px;
+        font-weight: 700;
+        min-height: 60px;
+        margin-bottom: 20px;
+    }
+
+    // .careercard__map
+
+    &__map {
+        display: flex;
+        align-items: center;
+        gap:10px;
+        margin-bottom: 30px;
+    }
+}
+
+.spoiler {
+    padding: 20px;
+    border: 1.5px solid #112E4F;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    // .spoiler__btn
+
+    &__btn {
+        color: #37393D;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 12px 0px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2U9IiMxMTJFNEYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTIgMjJjNS41MjMgMCAxMC00LjQ3NyAxMC0xMFMxNy41MjMgMiAxMiAyIDIgNi40NzcgMiAxMnM0LjQ3NyAxMCAxMCAxMFptMC0xNHY4bS00LTRoOCIvPjwvc3ZnPg==");
+        background-repeat: no-repeat;
+        background-position: center right;
+        padding-right: 30px;
+    }
+
+    // .spoiler__content
+
+    &__content {
+        display: none;
+        margin-top: 10px;
+        color: #37393D;
+    }
+
+    &.active{
+        border: 1.5px solid #084E95;
+        .spoiler__btn{
+            color: #2E73B9;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2U9IiMwODRFOTUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTIgMjJjNS41MjMgMCAxMC00LjQ3NyAxMC0xMFMxNy41MjMgMiAxMiAyIDIgNi40NzcgMiAxMnM0LjQ3NyAxMCAxMCAxMFpNOCAxMmg4Ii8+PC9zdmc+");
+        }
+        .spoiler__content{
+            display: block;
+        }
     }
 }
