@@ -105,4 +105,24 @@ jQuery(function ($) {
     $('.cancelbtn').on('click', function(e){
         $.magnificPopup.close();
     });
+
+
+    function showHidePassBtn(){
+        $('input[type="password"]').wrap('<div class="rmpass"></div>');
+        $('.rmpass').append('<button class="rmpass__btn"></button>');
+        $('.rmpass__btn').on('click', function(e){
+            e.preventDefault();
+            let pass = $(this).closest('.rmpass').find('input');
+            if(pass.attr('type')=='password'){
+                pass.attr('type', 'textbox');
+                $(this).addClass('active');
+            }else{
+                pass.attr('type', 'password');
+                $(this).removeClass('active');
+            }
+        });
+    }
+    showHidePassBtn();
+
+   
 });

@@ -31,7 +31,7 @@
             </style>
             <a href="#singin" class="open-popup-link">Show singin popup</a>
             <a href="#resetpass" class="open-popup-link">Show reset password popup</a>
-            <a href="#singin" class="open-popup-link">Show pick new password popup</a>
+            <a href="#picknewpass" class="open-popup-link">Show pick new password popup</a>
             <a href="#singin" class="open-popup-link">Show application popup</a>
             <a href="#singin" class="open-popup-link">Show application reset password popup</a>
         </main>
@@ -129,13 +129,122 @@
                                             placeholder="Write your user name or email"
                                         />
                                     </div>
-                                    <div class="form__item">
-                                        <button class="yellowbtn" type="submit" style="max-width:100%;">Get new password</button>
+                                    <div class="form__item">      
+                                        <button id="tmp1" class="yellowbtn" type="submit" style="max-width:100%;">Get new password</button>
+                                        <script>
+                                            // remove
+                                            const  tmp1 = document.querySelector("#tmp1");
+                                            tmp1.addEventListener("click", resetpass, false);
+                                            function resetpass(e){
+                                                e.preventDefault();
+                                                console.log('test');
+                                                let f = document.getElementById('resetpass');
+                                                let tmp = f.getElementsByClassName('fullpage__container');
+                                                tmp[0].style.display = "none";
+                                                tmp[1].style.display = "block";
+                                            }
+                                            // 
+                                        </script>
                                     </div>
                                     <div class="form__item" style="text-align:center;">
                                         <button class="cancelbtn" type="reset">Cancel</button>
                                     </div>
                                 </form>
+                            </div>
+                            <div class="fullpage__container" style="display:none;">
+                                <img src="img/logo.png" alt="" />
+                                <h1 class="fullpage__title">
+                                    Thank you!
+                                </h1>
+                                <p>We sent a message to email@email , 
+                                    so you can choose your new password.</p>
+                                    <p>Didn’t get the email? <a href="#">Try again.</a></p>
+                                <a href="/" class="yellowbtn" style="max-width:100%;">Go home page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullpage__poster">
+                    <img src="img/fullpage.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+
+        <div id="picknewpass" class="popup mfp-hide">
+            <div class="fullpage__wrapper">
+                <div class="fullpage__content">
+                    <div class="container">
+                        <div class="fullpage__main">
+                            <div class="fullpage__container">
+                                <img src="img/logo.png" alt="" />
+                                <h1 class="fullpage__title">
+                                    Pick new password
+                                </h1>
+                                <p>Please enter your username or email address. You will receive an email message with instructions on how to reset your password.</p>
+                                <form action="#" class="form">
+                                    <div class="form__item">
+                                        <span class="form__item_label">New password</span>
+                                        <input
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            class="textbox"
+                                            placeholder="Write your password"
+                                        />
+                                    </div>
+                                    <div class="form__item">
+                                        <span class="form__item_label">Try it again</span>
+                                        <input
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            class="textbox"
+                                            placeholder="Write your password"
+                                        />
+                                    </div>
+                                    <div class="form__item">      
+                                        <button id="tmp2" class="yellowbtn" type="submit" style="max-width:100%;">Change password</button>
+                                        <script>
+                                            // remove
+                                            const  tmp2 = document.querySelector("#tmp2");
+                                            tmp2.addEventListener("click", resetpass, false);
+                                            function resetpass(e){
+                                                e.preventDefault();
+                                                console.log('test');
+                                                let f = document.getElementById('picknewpass');
+                                                let tmp = f.getElementsByClassName('fullpage__container');
+                                                tmp[0].style.display = "none";
+                                                tmp[1].style.display = "block";
+                                            }
+                                            // 
+                                        </script>
+                                    </div>
+                                    <div class="form__item" style="text-align:center;">
+                                        <button class="cancelbtn" type="reset">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="fullpage__container" style="display:none;">
+                                <img src="img/logo.png" alt="" />
+                                <div style="margin-top:100px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 100 100">
+                                    <circle cx="49.77" cy="49.77" r="45.762" fill="#3B9C51"/>
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.008" d="M68.332 39.584 43.124 64.792 31.666 53.334"/>
+                                </svg>   
+                                </div>                               
+                                <h1 class="fullpage__title">
+                                    Password changed!
+                                </h1>
+                                <p>Your password has been changed successfully!</p>
+                                <div class="form__item" style="text-align:center;">
+                                    <a href="/" class="yellowbtn" style="max-width:100%;">Sign in</a>
+                                </div>
+                                <div class="form__item" style="text-align:center;">
+                                    <a href="/" class="cancelbtn">Go to main page</a>
+                                </div>
+                               
+                                
                             </div>
                         </div>
                     </div>
